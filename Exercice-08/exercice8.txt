@@ -1,0 +1,20 @@
+FONCTIONS_UTILISEES
+VARIABLES
+  total_pas EST_DU_TYPE NOMBRE
+  pas_ajout EST_DU_TYPE NOMBRE
+  continuer EST_DU_TYPE CHAINE
+DEBUT_ALGORITHME
+  total_pas PREND_LA_VALEUR 0
+  AFFICHER "Voulez-vous ajouter des pas ? (oui/non)"
+  LIRE continuer
+  TANT_QUE (continuer != "non") FAIRE
+    DEBUT_TANT_QUE
+    AFFICHER "Combien de pas avez-vous fait ?"
+    LIRE pas_ajout
+    total_pas PREND_LA_VALEUR total_pas + pas_ajout
+    AFFICHER "Voulez-vous ajouter plus de pas ? (oui/non)"
+    LIRE continuer
+    FIN_TANT_QUE
+  AFFICHER "Nombre total de pas : "
+  AFFICHER total_pas
+FIN_ALGORITHME

@@ -1,0 +1,17 @@
+FONCTIONS_UTILISEES
+VARIABLES
+  a EST_DU_TYPE NOMBRE
+  b EST_DU_TYPE NOMBRE
+  c EST_DU_TYPE NOMBRE
+  moy EST_DU_TYPE NOMBRE
+DEBUT_ALGORITHME
+  AFFICHER "Entrez la première note: "
+  LIRE a
+  AFFICHER "Entrez la seconde note: "
+  LIRE b
+  AFFICHER "Entrez la troisième note: "
+  LIRE c
+  moy PREND_LA_VALEUR (a+b+c)/3
+  AFFICHER "La moyenne est :"
+  AFFICHER* moy
+FIN_ALGORITHME

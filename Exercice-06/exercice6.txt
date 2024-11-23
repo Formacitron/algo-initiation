@@ -1,0 +1,22 @@
+FONCTIONS_UTILISEES
+VARIABLES
+  age EST_DU_TYPE NOMBRE
+DEBUT_ALGORITHME
+  AFFICHER "Quel est votre âge ?"
+  LIRE age
+  SI (age < 12) ALORS
+    DEBUT_SI
+    AFFICHER "Bienvenue dans l'aire de jeux pour enfants !"
+    FIN_SI
+    SINON
+      DEBUT_SINON
+      SI (age <= 18) ALORS
+        DEBUT_SI
+        AFFICHER "Les montagnes russes vous attendent !"
+        FIN_SI
+        SINON
+          DEBUT_SINON
+          AFFICHER "Profitez de toutes nos attractions !"
+          FIN_SINON
+      FIN_SINON
+FIN_ALGORITHME

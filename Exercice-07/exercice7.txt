@@ -1,0 +1,32 @@
+FONCTIONS_UTILISEES
+VARIABLES
+  force EST_DU_TYPE CHAINE
+  lait EST_DU_TYPE CHAINE
+DEBUT_ALGORITHME
+  AFFICHER "Préférez-vous un café fort ou léger ? (fort/leger)"
+  LIRE force
+  AFFICHER "Souhaitez-vous du lait ? (oui/non)"
+  LIRE lait
+  SI (force == "fort") ALORS
+    DEBUT_SI
+    SI (lait == "oui") ALORS
+      DEBUT_SI
+      AFFICHER "Voici un cappuccino !"
+      FIN_SI
+      SINON
+        DEBUT_SINON
+        AFFICHER "Voici un expresso !"
+        FIN_SINON
+    FIN_SI
+    SINON
+      DEBUT_SINON
+      SI (lait == "oui") ALORS
+        DEBUT_SI
+        AFFICHER "Voici un café latte !"
+        FIN_SI
+        SINON
+          DEBUT_SINON
+          AFFICHER "Voici un café américain !"
+          FIN_SINON
+      FIN_SINON
+FIN_ALGORITHME

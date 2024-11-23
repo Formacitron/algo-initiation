@@ -1,0 +1,8 @@
+Explication : Cet algorithme utilise deux boucles imbriquées qui parcourent chacune tous les éléments du tableau. Pour chaque élément du tableau extérieur (i), l'algorithme parcourt à nouveau tous les éléments du tableau intérieur (j). Cela résulte en n * n = n² opérations, où n est la taille du tableau. Par conséquent, la complexité de cet algorithme est O(n²).
+
+Cette complexité quadratique signifie que le temps d'exécution augmente de manière significative à mesure que la taille des données d'entrée augmente. Par exemple, si on double la taille du tableau, le temps d'exécution sera multiplié par quatre.
+
+Les algorithmes avec une complexité O(n²) peuvent devenir très lents pour de grandes quantités de données. Ils sont généralement acceptables pour de petits ensembles de données, mais pour des ensembles plus importants, on cherche souvent des alternatives plus efficaces si possible.
+
+Ces exercices aident à comprendre comment évaluer la complexité d'un algorithme en se concentrant sur les opérations principales et en identifiant comment le temps d'exécution évolue en fonction de la taille des données d'entrée.
+

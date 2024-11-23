@@ -1,0 +1,49 @@
+FONCTIONS_UTILISEES
+VARIABLES
+  inventaire EST_DU_TYPE LISTE
+  i EST_DU_TYPE NOMBRE
+  produit EST_DU_TYPE NOMBRE
+  quantite EST_DU_TYPE NOMBRE
+DEBUT_ALGORITHME
+  POUR i ALLANT_DE 0 A 4
+    DEBUT_POUR
+    inventaire[i] PREND_LA_VALEUR 0
+    FIN_POUR
+  inventaire[0] PREND_LA_VALEUR 10
+  inventaire[1] PREND_LA_VALEUR 15
+  inventaire[2] PREND_LA_VALEUR 5
+  inventaire[3] PREND_LA_VALEUR 20
+  inventaire[4] PREND_LA_VALEUR 8
+  AFFICHER "Inventaire initial :"
+  POUR i ALLANT_DE 0 A 4
+    DEBUT_POUR
+    AFFICHER "Produit "
+    AFFICHER i
+    AFFICHER " : "
+    AFFICHER inventaire[i]
+    AFFICHER " unités"
+    AFFICHER* " "
+    FIN_POUR
+  AFFICHER "Quel produit souhaitez-vous acheter (0-4) ?"
+  LIRE produit
+  AFFICHER "Quelle quantité ?"
+  LIRE quantite
+  SI (quantite <= inventaire[produit]) ALORS
+    DEBUT_SI
+    inventaire[produit] PREND_LA_VALEUR inventaire[produit] - quantite
+    AFFICHER "Achat effectué. Nouvel inventaire :"
+    FIN_SI
+    SINON
+      DEBUT_SINON
+      AFFICHER "Quantité insuffisante. Inventaire inchangé :"
+      FIN_SINON
+  POUR i ALLANT_DE 0 A 4
+    DEBUT_POUR
+    AFFICHER "Produit "
+    AFFICHER i
+    AFFICHER " : "
+    AFFICHER inventaire[i]
+    AFFICHER " unités"
+    AFFICHER* " "
+    FIN_POUR
+FIN_ALGORITHME

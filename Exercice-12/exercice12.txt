@@ -1,0 +1,43 @@
+FONCTIONS_UTILISEES
+VARIABLES
+  temperatures EST_DU_TYPE LISTE
+  i EST_DU_TYPE NOMBRE
+  max EST_DU_TYPE NOMBRE
+  min EST_DU_TYPE NOMBRE
+  somme EST_DU_TYPE NOMBRE
+  moyenne EST_DU_TYPE NOMBRE
+DEBUT_ALGORITHME
+  POUR i ALLANT_DE 0 A 6
+    DEBUT_POUR
+    temperatures[i] PREND_LA_VALEUR 0
+    FIN_POUR
+  temperatures[0] PREND_LA_VALEUR 22
+  temperatures[1] PREND_LA_VALEUR 19
+  temperatures[2] PREND_LA_VALEUR 24
+  temperatures[3] PREND_LA_VALEUR 21
+  temperatures[4] PREND_LA_VALEUR 18
+  temperatures[5] PREND_LA_VALEUR 23
+  temperatures[6] PREND_LA_VALEUR 20
+  max PREND_LA_VALEUR temperatures[0]
+  min PREND_LA_VALEUR temperatures[0]
+  somme PREND_LA_VALEUR 0
+  POUR i ALLANT_DE 0 A 6
+    DEBUT_POUR
+    SI (temperatures[i] > max) ALORS
+      DEBUT_SI
+      max PREND_LA_VALEUR temperatures[i]
+      FIN_SI
+    SI (temperatures[i] < min) ALORS
+      DEBUT_SI
+      min PREND_LA_VALEUR temperatures[i]
+      FIN_SI
+    somme PREND_LA_VALEUR somme + temperatures[i]
+    FIN_POUR
+  moyenne PREND_LA_VALEUR somme / 7
+  AFFICHER "Température la plus élevée : "
+  AFFICHER* max
+  AFFICHER "Température la plus basse : "
+  AFFICHER* min
+  AFFICHER "Température moyenne : "
+  AFFICHER* moyenne
+FIN_ALGORITHME

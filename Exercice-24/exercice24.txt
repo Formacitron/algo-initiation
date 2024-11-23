@@ -1,0 +1,2 @@
+Explication : Cet algorithme parcourt une fois chaque élément du tableau pour calculer la somme. Le temps d'exécution augmente linéairement avec la taille du tableau. La complexité est donc O(n), où n est la taille du tableau.
+

@@ -1,0 +1,1508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Algorithmique, initiation</title>
+<meta name="author" content="Steeve Lefort"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/theme/white.css" id="theme"/>
+
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdn.jsdelivr.net/npm/reveal.js@4/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+<style>
+.reveal .slides section.small {
+font-size: 0.75em;
+}
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h1 class="title">Algorithmique, initiation</h1><p class="subtitle"></p>
+<h2 class="author">Steeve Lefort</h2><h2 class="date">2024</h2>
+</section>
+
+<section>
+<section id="slide-org4e6eecf">
+<h2 id="org4e6eecf">Partie 1</h2>
+<div class="org-center">
+<p>
+Variables
+</p>
+</div>
+
+
+</section>
+</section>
+<section>
+<section id="slide-org8150d18" class="small">
+<h2 id="org8150d18">Exercice 1: Création et Affichage</h2>
+<p>
+Créez un algorithme qui :
+</p>
+<ol>
+<li>Déclare une variable pour l'âge (nombre entier)</li>
+<li>Déclare une variable pour le prénom (chaîne de caractères)</li>
+<li>Affecte des valeurs à ces variables</li>
+<li>Affiche le contenu de ces variables</li>
+
+</ol>
+
+
+
+</section>
+</section>
+<section>
+<section id="slide-orga124412" class="small">
+<h2 id="orga124412">Exercice 2: Concaténation</h2>
+<p>
+Créez un algorithme qui :
+</p>
+<ol>
+<li>Déclare et initialise une variable pour le prénom</li>
+<li>Déclare et initialise une variable pour le nom</li>
+<li>Crée une troisième variable qui combine le prénom et le nom</li>
+<li>Affiche le résultat</li>
+
+</ol>
+
+
+
+</section>
+</section>
+<section>
+<section id="slide-org59870af" class="small">
+<h2 id="org59870af">Exercice 3: Calculs Simples</h2>
+<p>
+Créez un algorithme qui :
+</p>
+<ol>
+<li>Déclare et initialise deux variables numériques</li>
+<li>Effectue l'addition, la soustraction, la multiplication et la division de ces deux nombres</li>
+<li>Affiche les résultats de chaque opération</li>
+
+</ol>
+
+
+
+</section>
+</section>
+<section>
+<section id="slide-org93fe433" class="small">
+<h2 id="org93fe433">Exercice 4: Calcul d'une Moyenne</h2>
+<p>
+Créez un algorithme qui :
+</p>
+<ol>
+<li>Déclare trois variables pour stocker des notes</li>
+<li>Permet à l’utilisateur de saisir les valeurs de ces variables</li>
+<li>Calcule la moyenne de ces trois notes</li>
+<li>Affiche le résultat</li>
+
+</ol>
+
+
+
+
+</section>
+</section>
+<section>
+<section id="slide-org51583c7" class="small">
+<h2 id="org51583c7">Exercice 5: Échange de Valeurs</h2>
+<p>
+Créez un algorithme qui :
+</p>
+<ol>
+<li>Déclare deux variables A et B</li>
+<li>Permet à l’utilisateur de saisir les valeurs de ces variables</li>
+<li>Échange les valeurs de A et B</li>
+<li>Affiche les valeurs avant et après l'échange</li>
+
+</ol>
+
+<p>
+Illustration :
+</p>
+<pre  class="example" >
+Avant :  A = 5  B = 10
+Après :  A = 10 B = 5
+</pre>
+
+
+
+</section>
+</section>
+<section>
+<section id="slide-org6ce0a8e">
+<h2 id="org6ce0a8e">Partie 2</h2>
+<div class="org-center">
+<p>
+Les tests conditionnels
+</p>
+</div>
+
+
+</section>
+</section>
+<section>
+<section id="slide-orgd0bb354" class="small">
+<h2 id="orgd0bb354">Exercice 6: Le Gardien du Parc d'Attractions</h2>
+<p>
+Créez un algorithme pour un parc d'attractions qui :
+</p>
+<ol>
+<li>Demande l'âge du visiteur</li>
+<li>Si l'âge est inférieur à 12 ans, affiche "Bienvenue dans l'aire de jeux pour enfants !"</li>
+<li>Si l'âge est entre 12 et 18 ans (inclus), affiche "Les montagnes russes vous attendent !"</li>
+<li>Si l'âge est supérieur à 18 ans, affiche "Profitez de toutes nos attractions !"</li>
+
+</ol>
+
+
+
+
+</section>
+</section>
+<section>
+<section id="slide-org5af9b1c" class="small">
+<h2 id="org5af9b1c">Exercice 7: Le Conseiller en Cafés</h2>
+<p>
+Créez un algorithme pour une machine à café intelligente qui :
+</p>
+<ol>
+<li>Demande à l'utilisateur s'il préfère un café fort ou léger</li>
+<li>Demande s'il souhaite du lait</li>
+<li>En fonction des réponses :
+<ul>
+<li>Si café fort sans lait : "Voici un expresso !"</li>
+<li>Si café fort avec lait : "Voici un cappuccino !"</li>
+<li>Si café léger sans lait : "Voici un café américain !"</li>
+<li>Si café léger avec lait : "Voici un café latte !"</li>
+
+</ul></li>
+
+</ol>
+
+
+
+
+</section>
+</section>
+<section>
+<section id="slide-org17e559f">
+<h2 id="org17e559f">Partie 3</h2>
+<div class="org-center">
+<p>
+Les boucles
+</p>
+</div>
+
+
+</section>
+</section>
+<section>
+<section id="slide-org8e5346b" class="small">
+<h2 id="org8e5346b">Exercice 8: Le Compteur de Pas</h2>
+<p>
+Créez un algorithme qui simule un podomètre :
+</p>
+<ol>
+<li>Initialise le nombre de pas à 0</li>
+<li>Demande à l'utilisateur combien de pas il a fait aujourd'hui</li>
+<li>Ajoute ce nombre au total</li>
+<li>Demande si l'utilisateur veut ajouter plus de pas</li>
+<li>Si oui, répète les étapes 2-4</li>
+<li>Si non, affiche le nombre total de pas</li>
+
+</ol>
+
+
+
+</section>
+</section>
+<section>
+<section id="slide-org8597e08" class="small">
+<h2 id="org8597e08">Exercice 9: La Table de Multiplication</h2>
+<p>
+Créez un algorithme qui :
+</p>
+<ol>
+<li>Demande à l'utilisateur de choisir un nombre entre 1 et 10</li>
+<li>Affiche la table de multiplication de ce nombre de 1 à 10</li>
+<li>Pour chaque résultat pair, ajoute "Pair !" à côté du résultat</li>
+
+</ol>
+
+
+
+</section>
+</section>
+<section>
+<section id="slide-orgc0641c0">
+<h2 id="orgc0641c0">Partie 4</h2>
+<div class="org-center">
+<p>
+Les tableaux
+</p>
+</div>
+
+
+</section>
+</section>
+<section>
+<section id="slide-org5fa2517" class="small">
+<h2 id="org5fa2517">Exercice 10: Calcul d'une Moyenne</h2>
+<p>
+Créez un algorithme qui :
+</p>
+<ol>
+<li>Déclare un tableau destiné à stocker des notes</li>
+<li>Permet à l’utilisateur de saisir autant de notes qu’il le souhaite</li>
+<li>La saisie s’arrête si l’utilisateur saisi une valeur négative</li>
+<li>Calcule la moyenne des notes</li>
+<li>Affiche le résultat</li>
+
+</ol>
+
+
+
+</section>
+</section>
+<section>
+<section id="slide-orgcafa2e6" class="small">
+<h2 id="orgcafa2e6">Exercice 11: Le Gestionnaire d'Inventaire</h2>
+<p>
+Créez un algorithme pour gérer l'inventaire d'une petite boutique :
+</p>
+<ol>
+<li>Initialisez un tableau de 5 produits avec leurs quantités</li>
+<li>Affichez l'inventaire initial</li>
+<li>Demandez à l'utilisateur quel produit il souhaite acheter (par index)</li>
+<li>Demandez la quantité souhaitée</li>
+<li>Mettez à jour l'inventaire et affichez-le à nouveau</li>
+
+</ol>
+
+
+
+</section>
+</section>
+<section>
+<section id="slide-orge92c314" class="small">
+<h2 id="orge92c314">Exercice 12: L'Analyseur de Températures</h2>
+<p>
+Créez un algorithme qui analyse les températures d'une semaine :
+</p>
+<ol>
+<li>Initialisez un tableau de 7 températures (une pour chaque jour)</li>
+<li>Trouvez et affichez la température la plus élevée et la plus basse</li>
+<li>Calculez et affichez la température moyenne de la semaine</li>
+
+</ol>
+
+
+</section>
+</section>
+<section>
+<section id="slide-org111f75f" class="small">
+<h2 id="org111f75f">Exercice 13: Transposition de matrice</h2>
+</section>
+<section id="slide-org31dd622">
+<h3 id="org31dd622">Objectif</h3>
+<p>
+Écrire un algorithme qui transpose une matrice 3x3.
+</p>
+
+</section>
+<section id="slide-org0432526">
+<h3 id="org0432526">Définition</h3>
+<p>
+La transposition d'une matrice consiste à échanger ses lignes et ses colonnes. Dans une matrice transposée, le premier élément de chaque ligne devient le premier élément de chaque colonne, le deuxième élément de chaque ligne devient le deuxième élément de chaque colonne, et ainsi de suite.
+</p>
+
+</section>
+<section id="slide-org83e9d65">
+<h3 id="org83e9d65">Exemple</h3>
+<pre  class="example" >
+Matrice originale :        Matrice transposée :
+| 1 2 3 |                  | 1 4 7 |
+| 4 5 6 |                  | 2 5 8 |
+| 7 8 9 |                  | 3 6 9 |
+</pre>
+
+</section>
+<section id="slide-org2af2d08">
+<h3 id="org2af2d08">Instructions</h3>
+<ol>
+<li>Créez une matrice 3x3 avec des valeurs de votre choix.</li>
+<li>Affichez la matrice originale.</li>
+<li>Créez une nouvelle matrice pour stocker le résultat de la transposition.</li>
+<li>Parcourez la matrice originale et remplissez la nouvelle matrice en échangeant les indices des lignes et des colonnes.</li>
+<li>Affichez la matrice transposée.</li>
+
+</ol>
+
+
+
+</section>
+</section>
+<section>
+<section id="slide-org8f9b309">
+<h2 id="org8f9b309">Partie 5</h2>
+<div class="org-center">
+<p>
+Les procédures et fonctions
+</p>
+</div>
+
+
+</section>
+</section>
+<section>
+<section id="slide-orge1ac1f1" class="small">
+<h2 id="orge1ac1f1">Exercice 14: Le Convertisseur de Devises</h2>
+<p>
+Créez un algorithme avec une fonction qui convertit des euros en dollars :
+</p>
+<ol>
+<li>Créez une fonction "euroToDollar" qui prend un montant en euros et renvoie l'équivalent en dollars</li>
+<li>Dans le programme principal, demandez à l'utilisateur un montant en euros</li>
+<li>Utilisez la fonction pour convertir et afficher le résultat en dollars</li>
+
+</ol>
+
+
+
+</section>
+</section>
+<section>
+<section id="slide-org45f7bc8" class="small">
+<h2 id="org45f7bc8">Exercice 15: Le Calculateur d'IMC</h2>
+<p>
+Créez un algorithme avec une procédure qui calcule l'Indice de Masse Corporelle (IMC) :
+</p>
+<ol>
+<li>Créez une procédure "calculIMC" qui prend le poids et la taille et affiche l'IMC</li>
+<li>Dans le programme principal, demandez à l'utilisateur son poids et sa taille</li>
+<li>Utilisez la procédure pour calculer et afficher l'IMC</li>
+
+</ol>
+
+</section>
+<section id="slide-org6500d49">
+<h3 id="org6500d49">IMC</h3>
+<p>
+La formule pour calculer l'Indice de Masse Corporelle (IMC) est:
+</p>
+<pre  class="example" >
+IMC = poids / (taille²)
+</pre>
+
+
+
+</section>
+</section>
+<section>
+<section id="slide-org92f9191">
+<h2 id="org92f9191">Partie 6</h2>
+<div class="org-center">
+<p>
+La récursivité
+</p>
+</div>
+
+
+</section>
+</section>
+<section>
+<section id="slide-org3c0f346" class="small">
+<h2 id="org3c0f346">Exercice 16: La Suite de Fibonacci</h2>
+<p>
+<b>Cet exercice n’est pas réalisable avec Algobox. Nous allons l’implémenter en Python.</b>
+</p>
+
+</section>
+<section id="slide-org9d7f5de">
+<h3 id="org9d7f5de">Informations</h3>
+<p>
+La suite de Fibonacci est définie par la relation de récurrence suivante :
+</p>
+<pre  class="example" >
+F(n) = F(n-1) + F(n-2)
+</pre>
+<p>
+avec les conditions initiales :
+</p>
+
+<p>
+F(0) = 0
+F(1) = 1
+</p>
+
+<p>
+Les premiers termes de la suite de Fibonacci sont :
+</p>
+<pre class="example" id="org08192e6">
+0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, ...
+</pre>
+<pre  class="example" >
+F(0) = 0 (condition initiale)
+F(1) = 1 (condition initiale)
+F(2) = F(1) + F(0) = 1 + 0 = 1
+F(3) = F(2) + F(1) = 1 + 1 = 2
+F(4) = F(3) + F(2) = 2 + 1 = 3
+F(5) = F(4) + F(3) = 3 + 2 = 5
+</pre>
+<p>
+Et ainsi de suite&#x2026;
+</p>
+
+</section>
+<section id="slide-org87dc7b6">
+<h3 id="org87dc7b6">Énoncé</h3>
+<p>
+Créez un algorithme récursif qui calcule le n-ième terme de la suite de Fibonacci :
+</p>
+<ol>
+<li>Créez une fonction récursive "fibonacci" qui prend un nombre n en entrée</li>
+<li>La fonction doit renvoyer le n-ième terme de la suite de Fibonacci</li>
+<li>Dans le programme principal, demandez à l'utilisateur un nombre n</li>
+<li>Utilisez la fonction pour calculer et afficher le résultat</li>
+
+</ol>
+
+
+
+</section>
+</section>
+<section>
+<section id="slide-org8329986" class="small">
+<h2 id="org8329986">Exercice 17: Le Compteur à Rebours Récursif</h2>
+<p>
+Créez un algorithme récursif qui effectue un compte à rebours :
+</p>
+<ol>
+<li>Créez une procédure récursive "compteARebours" qui prend un nombre n en entrée</li>
+<li>La procédure doit afficher les nombres de n à 1, puis "Décollage !"</li>
+<li>Dans le programme principal, demandez à l'utilisateur un nombre de départ</li>
+<li>Utilisez la procédure pour effectuer le compte à rebours</li>
+
+</ol>
+
+
+</section>
+</section>
+<section>
+<section id="slide-orgb0b62e0">
+<h2 id="orgb0b62e0">Partie 7</h2>
+<div class="org-center">
+<p>
+Piles et files
+</p>
+</div>
+
+
+</section>
+</section>
+<section>
+<section id="slide-org673a809" class="small">
+<h2 id="org673a809">Exercice 18: Simulation d'une pile de livres</h2>
+<p>
+Objectif : Implémenter les opérations de base d'une pile (empiler et dépiler) en utilisant un tableau.
+</p>
+
+</section>
+<section id="slide-orgdf37e42">
+<h3 id="orgdf37e42">Instructions :</h3>
+<ol>
+<li>Créez un tableau pour représenter une pile de livres.</li>
+<li>Implémentez une fonction pour ajouter un livre au sommet de la pile (empiler).</li>
+<li>Implémentez une fonction pour retirer le livre du sommet de la pile (dépiler).</li>
+<li>Affichez l'état de la pile après chaque opération.</li>
+
+</ol>
+
+</section>
+<section id="slide-org859a174">
+<h3 id="org859a174">Exemple d'utilisation :</h3>
+<ul>
+<li>Empilez les livres : "Harry Potter", "Le Seigneur des Anneaux", "1984"</li>
+<li>Dépilez un livre</li>
+<li>Empilez "Dune"</li>
+<li>Affichez le contenu final de la pile</li>
+
+</ul>
+
+
+
+</section>
+</section>
+<section>
+<section id="slide-orgdce94e3" class="small">
+<h2 id="orgdce94e3">Exercice 19: Vérification des parenthèses</h2>
+<p>
+Objectif : Utiliser une pile pour vérifier si une expression mathématique a des parenthèses bien équilibrées.
+</p>
+</section>
+<section id="slide-org44588e9" class="small">
+<h3 id="org44588e9">Instructions:</h3>
+<ol>
+<li>Créez une fonction qui prend une chaîne de caractères représentant une expression mathématique.</li>
+<li>Parcourez la chaîne caractère par caractère.</li>
+<li>Si vous rencontrez une parenthèse ouvrante '(', empilez-la.:</li>
+<li>Si vous rencontrez une parenthèse fermante ')':
+<ul>
+<li>Si la pile est vide, l'expression est mal équilibrée (parenthèse fermante en trop).</li>
+<li>Sinon, dépilez une parenthèse ouvrante.</li>
+
+</ul></li>
+<li>À la fin du parcours :
+<ul>
+<li>Si la pile est vide, l'expression est bien équilibrée.</li>
+<li>Si la pile n'est pas vide, l'expression est mal équilibrée ( parenthèses ouvrantes en trop).</li>
+
+</ul></li>
+
+</ol>
+
+</section>
+<section id="slide-org8da6cb8" class="small">
+<h3 id="org8da6cb8">Exemple d'utilisation :</h3>
+<ul>
+<li>Testez avec l'expression : "((a+b)*(c-d))"  (bien équilibrée)</li>
+<li>Testez avec l'expression : "((a+b)*(c-d)"   (parenthèse ouvrante en trop)</li>
+<li>Testez avec l'expression : "((a+b)*(c-d)))" (parenthèse fermante en trop)</li>
+
+</ul>
+
+
+
+</section>
+</section>
+<section>
+<section id="slide-org0ed5a5f" class="small">
+<h2 id="org0ed5a5f">Exercice 20: Simulation d'une file d'attente</h2>
+<p>
+Objectif : Implémenter les opérations de base d'une file (enfiler et défiler) en utilisant un tableau.
+</p>
+
+</section>
+<section id="slide-orga35c41a" class="small">
+<h3 id="orga35c41a">Instructions :</h3>
+<ol>
+<li>Créez un tableau pour représenter une file d'attente de clients dans un magasin.</li>
+<li>Implémentez une fonction pour ajouter un client à la fin de la file (enfiler).</li>
+<li>Implémentez une fonction pour retirer le client en tête de file (défiler).</li>
+<li>Affichez l'état de la file après chaque opération.</li>
+
+</ol>
+
+</section>
+<section id="slide-orgb19450b" class="small">
+<h3 id="orgb19450b">Exemple d'utilisation :</h3>
+<ul>
+<li>Enfilez les clients : "Alice", "Bob", "Charlie"</li>
+<li>Défilez un client (le premier arrivé est le premier servi)</li>
+<li>Enfilez "David"</li>
+<li>Affichez le contenu final de la file</li>
+
+</ul>
+
+
+</section>
+</section>
+<section>
+<section id="slide-orgaa26d80" class="small">
+<h2 id="orgaa26d80">Exercice 21: Inversion d'une chaîne de caractères</h2>
+<p>
+Objectif : Utiliser une pile pour inverser une chaîne de caractères.
+</p>
+
+<p>
+Instructions :
+</p>
+<ol>
+<li>Créez une fonction qui prend une chaîne de caractères en entrée.</li>
+<li>Parcourez la chaîne et empilez chaque caractère.</li>
+<li>Créez une nouvelle chaîne en dépilant les caractères un par un.</li>
+<li>Retournez la nouvelle chaîne (qui sera l'inverse de l'originale).</li>
+
+</ol>
+
+<p>
+Exemple d'utilisation :
+</p>
+<ul>
+<li>Testez avec la chaîne : "algorithmique"</li>
+<li>Affichez la chaîne inversée</li>
+
+</ul>
+
+
+
+</section>
+</section>
+<section>
+<section id="slide-org1189a36">
+<h2 id="org1189a36">Partie 8</h2>
+<div class="org-center">
+<p>
+POO
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org5e3bfb0" class="small">
+<h2 id="org5e3bfb0">Exercice 22: Création d'une classe Personnage</h2>
+<p>
+Créez une classe <code>Personnage</code> pour un jeu vidéo avec les caractéristiques suivantes :
+</p>
+
+<ul>
+<li>Propriétés : <code>nom</code>, <code>points_de_vie</code>, <code>force</code></li>
+<li>Constructeur : initialise les propriétés lors de la création d'un personnage</li>
+<li>Méthodes : 
+<ul>
+<li><code>afficher_infos()</code> : affiche les informations du personnage</li>
+<li><code>attaquer(cible)</code> : réduit les points de vie de la cible en fonction de la force du personnage</li>
+
+</ul></li>
+
+</ul>
+
+<p>
+Créez ensuite deux instances de personnages et faites-les interagir.
+</p>
+
+
+</section>
+</section>
+<section>
+<section id="slide-orgaf7a40c">
+<h2 id="orgaf7a40c">Partie 9</h2>
+<div class="org-center">
+<p>
+Complexité algorithmique
+</p>
+</div>
+
+
+</section>
+</section>
+<section>
+<section id="slide-orgc70b7d1" class="small">
+<h2 id="orgc70b7d1">Exercice 23: Évaluation de la complexité</h2>
+<p>
+Évaluez la complexité de l'algorithme suivant :
+</p>
+
+<pre  class="example" >
+VARIABLES
+    tableau EST_DU_TYPE TABLEAU
+    taille EST_DU_TYPE NOMBRE
+    premier_element EST_DU_TYPE NOMBRE
+
+DEBUT_ALGORITHME
+    taille PREND_LA_VALEUR 1000
+    POUR i ALLANT_DE 1 A taille
+        tableau[i] PREND_LA_VALEUR i
+    FIN_POUR
+
+    premier_element PREND_LA_VALEUR tableau[1]
+    AFFICHER premier_element
+FIN_ALGORITHME
+</pre>
+
+
+</section>
+</section>
+<section>
+<section id="slide-org1769541" class="small">
+<h2 id="org1769541">Exercice 24: Évaluation de la complexité</h2>
+<p>
+Évaluez la complexité de l'algorithme suivant :
+</p>
+
+
+<pre  class="example" >
+VARIABLES
+    tableau EST_DU_TYPE TABLEAU
+    taille EST_DU_TYPE NOMBRE
+    somme EST_DU_TYPE NOMBRE
+
+DEBUT_ALGORITHME
+    taille PREND_LA_VALEUR 1000
+    somme PREND_LA_VALEUR 0
+
+    POUR i ALLANT_DE 1 A taille
+        tableau[i] PREND_LA_VALEUR i
+        somme PREND_LA_VALEUR somme + tableau[i]
+    FIN_POUR
+
+    AFFICHER somme
+FIN_ALGORITHME
+</pre>
+
+</section>
+</section>
+<section>
+<section id="slide-org5600b21" class="small">
+<h2 id="org5600b21">Exercice 25: Évaluation de la complexité</h2>
+<p>
+Évaluez la complexité de l'algorithme suivant :
+</p>
+
+
+<pre  class="example" >
+VARIABLES
+    tableau EST_DU_TYPE TABLEAU
+    taille EST_DU_TYPE NOMBRE
+    somme EST_DU_TYPE NOMBRE
+    premier_element EST_DU_TYPE NOMBRE
+
+DEBUT_ALGORITHME
+    taille PREND_LA_VALEUR 1000
+    somme PREND_LA_VALEUR 0
+
+    POUR i ALLANT_DE 1 A taille
+        tableau[i] PREND_LA_VALEUR i
+        somme PREND_LA_VALEUR somme + tableau[i]
+    FIN_POUR
+
+    premier_element PREND_LA_VALEUR tableau[1]
+    AFFICHER somme
+    AFFICHER premier_element
+FIN_ALGORITHME
+</pre>
+
+</section>
+</section>
+<section>
+<section id="slide-org685f730" class="small">
+<h2 id="org685f730">Exercice 26: Évaluation de la complexité</h2>
+<p>
+Évaluez la complexité de l'algorithme suivant :
+</p>
+
+
+<pre  class="example" >
+VARIABLES
+    tableau EST_DU_TYPE TABLEAU
+    taille EST_DU_TYPE NOMBRE
+    somme EST_DU_TYPE NOMBRE
+
+DEBUT_ALGORITHME
+    taille PREND_LA_VALEUR 1000
+    somme PREND_LA_VALEUR 0
+
+    POUR i ALLANT_DE 1 A taille
+        tableau[i] PREND_LA_VALEUR i
+    FIN_POUR
+
+    POUR i ALLANT_DE 1 A taille
+        POUR j ALLANT_DE 1 A taille
+            somme PREND_LA_VALEUR somme + tableau[i] * tableau[j]
+        FIN_POUR
+    FIN_POUR
+
+    AFFICHER somme
+FIN_ALGORITHME
+</pre>
+
+
+</section>
+</section>
+<section>
+<section id="slide-org7aeec67">
+<h2 id="org7aeec67">Partie 10</h2>
+<div class="org-center">
+<p>
+Les tris
+</p>
+</div>
+
+
+</section>
+</section>
+<section>
+<section id="slide-orgddaa580" class="small">
+<h2 id="orgddaa580">Exercice 27: Implémentation du Tri à Bulles</h2>
+<p>
+Objectif : Implémenter l'algorithme du tri à bulles pour trier un tableau de nombres.
+</p>
+
+<p>
+Instructions :
+</p>
+<ol>
+<li>Créez une fonction "triBulles" qui prend un tableau en entrée.</li>
+<li>Implémentez l'algorithme du tri à bulles comme décrit dans les slides.</li>
+<li>La fonction doit modifier le tableau d'origine pour le trier par ordre croissant.</li>
+<li>Affichez le tableau avant et après le tri.</li>
+
+</ol>
+
+<p>
+Exemple d'utilisation :
+</p>
+<ul>
+<li>Testez avec le tableau : [64, 34, 25, 12, 22, 11, 90]</li>
+
+</ul>
+
+
+</section>
+</section>
+<section>
+<section id="slide-org8a8b410" class="small">
+<h2 id="org8a8b410">Exercice 28: Tri par Sélection</h2>
+<p>
+Objectif : Implémenter l'algorithme du tri par sélection.
+</p>
+
+<p>
+Instructions :
+</p>
+<ol>
+<li>Créez une fonction "triSelection" qui prend un tableau en entrée.</li>
+<li>Implémentez l'algorithme du tri par sélection comme décrit dans les slides.</li>
+<li>La fonction doit modifier le tableau d'origine pour le trier par ordre croissant.</li>
+<li>Affichez le tableau avant et après le tri.</li>
+
+</ol>
+
+<p>
+Exemple d'utilisation :
+</p>
+<ul>
+<li>Testez avec le tableau : [64, 25, 12, 22, 11]</li>
+
+</ul>
+
+
+</section>
+</section>
+<section>
+<section id="slide-org1d6dd73" class="small">
+<h2 id="org1d6dd73">Exercice 29: Tri par Insertion</h2>
+<p>
+Objectif : Implémenter l'algorithme du tri par insertion.
+</p>
+
+<p>
+Instructions :
+</p>
+<ol>
+<li>Créez une fonction "triInsertion" qui prend un tableau en entrée.</li>
+<li>Implémentez l'algorithme du tri par insertion comme décrit dans les slides.</li>
+<li>La fonction doit modifier le tableau d'origine pour le trier par ordre croissant.</li>
+<li>Affichez le tableau avant et après le tri.</li>
+
+</ol>
+
+<p>
+Exemple d'utilisation :
+</p>
+<ul>
+<li>Testez avec le tableau : [12, 11, 13, 5, 6]</li>
+
+</ul>
+
+
+</section>
+</section>
+<section>
+<section id="slide-orgc2afd43" class="small">
+<h2 id="orgc2afd43">Exercice 30: Implémentation du Tri Fusion</h2>
+<p>
+Objectif : Implémenter l'algorithme du tri fusion (merge sort).
+</p>
+
+<p>
+Instructions :
+</p>
+<ol>
+<li>Créez une fonction "fusion" qui fusionne deux sous-tableaux triés.</li>
+<li>Créez une fonction récursive "triFusion" qui implémente l'algorithme du tri fusion.</li>
+<li>La fonction doit retourner un nouveau tableau trié.</li>
+<li>Affichez le tableau avant et après le tri.</li>
+
+</ol>
+
+<p>
+Exemple d'utilisation :
+</p>
+<ul>
+<li>Testez avec le tableau : [38, 27, 43, 3, 9, 82, 10]</li>
+
+</ul>
+
+
+</section>
+</section>
+<section>
+<section id="slide-org864cf2e" class="small">
+<h2 id="org864cf2e">Exercice 31: Implémentation du Tri Rapide (Quicksort)</h2>
+<p>
+Objectif : Implémenter l'algorithme du tri rapide (quicksort).
+</p>
+
+<p>
+Instructions :
+</p>
+<ol>
+<li>Créez une fonction "partition" qui choisit un pivot et partitionne le tableau.</li>
+<li>Créez une fonction récursive "triRapide" qui implémente l'algorithme du tri rapide.</li>
+<li>La fonction doit modifier le tableau d'origine pour le trier par ordre croissant.</li>
+<li>Affichez le tableau avant et après le tri.</li>
+
+</ol>
+
+<p>
+Exemple d'utilisation :
+</p>
+<ul>
+<li>Testez avec le tableau : [10, 7, 8, 9, 1, 5]</li>
+
+</ul>
+
+
+</section>
+</section>
+<section>
+<section id="slide-orgbd85369" class="small">
+<h2 id="orgbd85369">Exercice 32: Implémentation du Tri par Tas (Heap Sort)</h2>
+<p>
+Objectif : Implémenter l'algorithme du tri par tas (heap sort).
+</p>
+
+</section>
+<section id="slide-orgfd99e45" class="small">
+<h3 id="orgfd99e45">Instructions :</h3>
+<ol>
+<li>Créez une fonction "entasser" qui maintient la propriété de tas pour un sous-arbre enraciné à l'indice i.</li>
+<li>Créez une fonction "construireMaxTas" qui construit un tas max à partir du tableau.</li>
+<li>Créez une fonction "triTas" qui implémente l'algorithme du tri par tas.</li>
+<li>La fonction doit modifier le tableau d'origine pour le trier par ordre croissant.</li>
+<li>Affichez le tableau avant et après le tri.</li>
+
+</ol>
+
+</section>
+<section id="slide-org5dd5d3e">
+<h3 id="org5dd5d3e">Exemple d'utilisation :</h3>
+<ul>
+<li>Testez avec le tableau : [12, 11, 13, 5, 6, 7]</li>
+
+</ul>
+
+
+</section>
+</section>
+<section>
+<section id="slide-org0497c08" class="small">
+<h2 id="org0497c08">Exercice 33: Comparaison du nombre de swaps</h2>
+<p>
+Objectif : Comparer l'efficacité des algorithmes de tri en termes de nombre d'échanges (swaps) effectués.
+</p>
+
+<p>
+Implémentez les algorithmes de tri à bulles, tri par sélection et tri par insertion. Pour chaque algorithme :
+</p>
+<ol>
+<li>Ajoutez un compteur pour suivre le nombre d'échanges effectués.</li>
+<li>Triez le tableau [5, 2, 8, 12, 1, 6] par ordre croissant.</li>
+<li>Affichez le nombre total d'échanges réalisés.</li>
+
+</ol>
+
+<p>
+Comparez les résultats et discutez de l'efficacité relative de chaque algorithme en termes de nombre d'échanges.
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org00e1846" class="small">
+<h2 id="org00e1846">Exercice 34: Comparaison des Algorithmes de Tri</h2>
+</section>
+<section id="slide-org5928046" class="small">
+<h3 id="org5928046">Instructions</h3>
+<ul>
+<li>Utilisez ce code pour mesurer le temps d'exécution :</li>
+
+</ul>
+
+<div class="org-src-container">
+
+<pre  class="src src-python"   ><code trim>import time
+
+def mesurer_temps(fonction_tri, tableau):
+    debut = time.time()
+    fonction_tri(tableau.copy())
+    fin = time.time()
+    return fin - debut
+
+# Exemple d'utilisation
+tableau = [5, 2, 8, 12, 1, 6]
+temps = mesurer_temps(votre_fonction_de_tri, tableau)
+print(f"Temps d'exécution : {temps:.6f} secondes")
+</code></pre>
+</div>
+
+</section>
+<section id="slide-orgb46e71d" class="small">
+<h3 id="orgb46e71d">À tester</h3>
+<ul>
+<li>Mesurez le temps pour chaque algorithme (tri à bulles, sélection, insertion).</li>
+<li>Comparez les résultats : Quel algorithme est le plus rapide ? Le plus lent ?</li>
+<li>Testez avec des tableaux de différentes tailles (100, 1000, 5000 éléments).</li>
+
+</ul>
+
+</section>
+<section id="slide-orgc3cec81" class="small">
+<h3 id="orgc3cec81">Réflexions</h3>
+<ul>
+<li>Pourquoi certains algorithmes sont-ils plus rapides que d'autres ?</li>
+<li>Comment les performances changent-elles avec la taille du tableau ?</li>
+
+</ul>
+
+
+
+
+
+</section>
+</section>
+<section>
+<section id="slide-org9aa3d47">
+<h2 id="org9aa3d47">Partie 11</h2>
+<div class="org-center">
+<p>
+Les arbres
+</p>
+</div>
+
+
+</section>
+</section>
+<section>
+<section id="slide-org86dde6e" class="small">
+<h2 id="org86dde6e">Exercice 35: Implémentation d'un Arbre Binaire</h2>
+<p>
+Objectif : Implémenter une structure d'arbre binaire et des fonctions pour l'insertion et l'affichage des nœuds.
+</p>
+
+</section>
+<section id="slide-org5163daf" class="small">
+<h3 id="org5163daf">Instructions :</h3>
+<ol>
+<li>Créez une structure Noeud avec les attributs valeur, gauche et droite.</li>
+<li>Implémentez une fonction pour insérer un nouveau nœud dans l'arbre.</li>
+<li>Implémentez une fonction pour afficher l'arbre en utilisant un parcours en profondeur (récursif).</li>
+<li>Dans le programme principal, créez un arbre binaire et insérez-y les valeurs suivantes : 5, 3, 7, 1, 9, 4, 6</li>
+<li>Affichez l'arbre résultant.</li>
+
+</ol>
+
+</section>
+<section id="slide-org526fee0" class="small">
+<h3 id="org526fee0">Exemple d'utilisation :</h3>
+<ul>
+<li>Créez l'arbre binaire avec les valeurs données.</li>
+<li>Affichez l'arbre pour vérifier la structure.</li>
+
+</ul>
+
+
+</section>
+</section>
+<section>
+<section id="slide-org075ff92" class="small">
+<h2 id="org075ff92">Exercice 36: Parcours en Largeur d'un Arbre Binaire</h2>
+<p>
+Objectif : Implémenter un parcours en largeur (BFS) d'un arbre binaire.
+</p>
+
+</section>
+<section id="slide-orga776922" class="small">
+<h3 id="orga776922">Instructions :</h3>
+<ol>
+<li>Utilisez la structure Noeud de l'exercice précédent.</li>
+<li>Implémentez une fonction <code>parcours_largeur</code> qui effectue un parcours en largeur de l'arbre.</li>
+<li>Utilisez une file pour stocker les nœuds à visiter.</li>
+<li>Dans le programme principal, créez le même arbre que dans l'exercice précédent.</li>
+<li>Effectuez un parcours en largeur de l'arbre et affichez les valeurs des nœuds dans l'ordre de visite.</li>
+
+</ol>
+
+</section>
+<section id="slide-org8908123" class="small">
+<h3 id="org8908123">Exemple d'utilisation :</h3>
+<ul>
+<li>Créez l'arbre binaire avec les valeurs : 5, 3, 7, 1, 9, 4, 6</li>
+<li>Effectuez un parcours en largeur et affichez le résultat.</li>
+
+</ul>
+
+
+</section>
+</section>
+<section>
+<section id="slide-orga1854fa" class="small">
+<h2 id="orga1854fa">Exercice 37: Parcours en Profondeur Récursif d'un Arbre Binaire</h2>
+<p>
+Objectif : Implémenter les trois types de parcours en profondeur récursifs d'un arbre binaire.
+</p>
+
+</section>
+<section id="slide-org7d006af" class="small">
+<h3 id="org7d006af">Instructions :</h3>
+<ol>
+<li>Utilisez la structure Noeud des exercices précédents.</li>
+<li>Implémentez trois fonctions récursives pour les parcours en profondeur :
+a. <code>parcours_preordre</code> (racine, gauche, droite)
+b. <code>parcours_inordre</code> (gauche, racine, droite)
+c. <code>parcours_postordre</code> (gauche, droite, racine)</li>
+<li>Dans le programme principal, créez le même arbre que dans les exercices précédents.</li>
+<li>Effectuez les trois types de parcours et affichez les résultats.</li>
+
+</ol>
+
+</section>
+<section id="slide-org88247d6" class="small">
+<h3 id="org88247d6">Exemple d'utilisation :</h3>
+<ul>
+<li>Créez l'arbre binaire avec les valeurs : 5, 3, 7, 1, 9, 4, 6</li>
+<li>Effectuez les trois types de parcours et affichez les résultats.</li>
+
+</ul>
+
+
+</section>
+</section>
+<section>
+<section id="slide-org0685161" class="small">
+<h2 id="org0685161">Exercice 38: Backtracking sur un Arbre N-aire</h2>
+<p>
+Objectif : Implémenter un algorithme de backtracking pour trouver tous les chemins de la racine aux feuilles dans un arbre n-aire.
+</p>
+
+</section>
+<section id="slide-orgd112679" class="small">
+<h3 id="orgd112679">Instructions :</h3>
+<ol>
+<li>Créez une structure NoeudNAire avec les attributs valeur et enfants (liste de nœuds).</li>
+<li>Implémentez une fonction récursive trouver<sub>chemins</sub> qui utilise le backtracking pour trouver tous les chemins de la racine aux feuilles.</li>
+<li>La fonction doit accumuler le chemin actuel et l'ajouter à la liste des chemins trouvés lorsqu'une feuille est atteinte.</li>
+<li>Dans le programme principal, créez un arbre n-aire simple et trouvez tous les chemins.</li>
+
+</ol>
+
+</section>
+<section id="slide-orga1b3eb5" class="small">
+<h3 id="orga1b3eb5">Exemple d'utilisation :</h3>
+<ul>
+<li><p>
+Créez un arbre n-aire avec la structure suivante :
+</p>
+<pre  class="example" >
+     A
+   / | \
+  B  C  D
+ /\    / \
+E  F  G   H
+</pre></li>
+<li>Trouvez tous les chemins de la racine aux feuilles.</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org8c7f281">
+<h2 id="org8c7f281">Partie 12</h2>
+<div class="org-center">
+<p>
+Les graphes
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org5e8b53e" class="small">
+<h2 id="org5e8b53e">Exercice 39: Implémentation d'un Graphe</h2>
+<p>
+Objectif : Implémenter une structure de graphe à l'aide d'une liste d'adjacence.
+</p>
+
+</section>
+<section id="slide-org06a7361" class="small">
+<h3 id="org06a7361">Instructions :</h3>
+<ol>
+<li>Créez une classe Graphe avec une méthode pour ajouter des sommets et des arêtes.</li>
+<li>Implémentez une méthode pour afficher le graphe.</li>
+<li>Dans le programme principal, créez un graphe représentant le réseau routier des villes suivantes : Paris, Lille, Rennes, Tours, Strasbourg, Bourges.</li>
+<li>Ajoutez les connexions entre les villes selon la carte fournie dans les slides.</li>
+<li>Affichez le graphe résultant.</li>
+
+</ol>
+
+</section>
+<section id="slide-orgd77b385" class="small">
+<h3 id="orgd77b385">Exemple d'utilisation :</h3>
+<ul>
+<li>Créez le graphe du réseau routier.</li>
+<li>Affichez la liste d'adjacence pour vérifier la structure.</li>
+
+</ul>
+
+
+</section>
+</section>
+<section>
+<section id="slide-org0cde48e" class="small">
+<h2 id="org0cde48e">Exercice 40: Parcours en Largeur (BFS)</h2>
+<p>
+Objectif : Implémenter l'algorithme de parcours en largeur (BFS) sur le graphe du réseau routier.
+</p>
+
+</section>
+<section id="slide-org3c4f30d" class="small">
+<h3 id="org3c4f30d">Instructions :</h3>
+<ol>
+<li>Utilisez la structure de Graphe de l'exercice précédent.</li>
+<li>Implémentez une fonction bfs qui prend en paramètres le graphe et un sommet de départ.</li>
+<li>La fonction doit afficher les sommets dans l'ordre de leur découverte.</li>
+<li>Dans le programme principal, créez le même graphe que dans l'exercice précédent.</li>
+<li>Effectuez un parcours en largeur à partir de Paris et affichez le résultat.</li>
+
+</ol>
+
+</section>
+<section id="slide-org9db1a30" class="small">
+<h3 id="org9db1a30">Exemple d'utilisation :</h3>
+<ul>
+<li>Créez le graphe du réseau routier.</li>
+<li>Effectuez un parcours en largeur à partir de Paris et affichez le résultat.</li>
+
+</ul>
+
+
+</section>
+</section>
+<section>
+<section id="slide-org8dfacd8" class="small">
+<h2 id="org8dfacd8">Exercice 41: Algorithme de Kruskal</h2>
+<p>
+Objectif : Implémenter l'algorithme de Kruskal pour trouver l'arbre couvrant de poids minimum du réseau routier.
+</p>
+
+</section>
+<section id="slide-org32dd00d" class="small">
+<h3 id="org32dd00d">Instructions :</h3>
+<ol>
+<li>Implémentez une fonction kruskal qui prend en paramètre le graphe.</li>
+<li>La fonction doit retourner les arêtes de l'arbre couvrant de poids minimum.</li>
+<li>Dans le programme principal, créez le même graphe que dans les exercices précédents.</li>
+<li>Appliquez l'algorithme de Kruskal et affichez les arêtes de l'arbre couvrant de poids minimum.</li>
+
+</ol>
+
+</section>
+<section id="slide-org2bf6f5b" class="small">
+<h3 id="org2bf6f5b">Exemple d'utilisation :</h3>
+<ul>
+<li>Créez le graphe du réseau routier.</li>
+<li>Appliquez l'algorithme de Kruskal et affichez le résultat.</li>
+
+</ul>
+
+
+</section>
+</section>
+<section>
+<section id="slide-org1ba315e" class="small">
+<h2 id="org1ba315e">Exercice 42: Algorithme de Floyd-Warshall</h2>
+<p>
+Objectif : Implémenter l'algorithme de Floyd-Warshall pour trouver les plus courts chemins entre toutes les paires de sommets du réseau routier.
+</p>
+
+</section>
+<section id="slide-org5ffbb7a" class="small">
+<h3 id="org5ffbb7a">Instructions :</h3>
+<ol>
+<li>Implémentez une fonction <code>floyd_warshall</code> qui prend en paramètre le graphe.</li>
+<li>La fonction doit retourner une matrice des distances les plus courtes entre chaque paire de sommets.</li>
+<li>Dans le programme principal, créez le même graphe que dans les exercices précédents.</li>
+<li>Appliquez l'algorithme de Floyd-Warshall et affichez la matrice des distances résultante.</li>
+
+</ol>
+
+</section>
+<section id="slide-orgbb21f83" class="small">
+<h3 id="orgbb21f83">Exemple d'utilisation :</h3>
+<ul>
+<li>Créez le graphe du réseau routier.</li>
+<li>Appliquez l'algorithme de Floyd-Warshall et affichez la matrice des distances.</li>
+
+</ul>
+
+
+
+</section>
+</section>
+<section>
+<section id="slide-org30c5c65">
+<h2 id="org30c5c65">Mini-projets</h2>
+<div class="org-center">
+<p>
+TP complémentaires
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org4913921">
+<h2 id="org4913921">Informations</h2>
+</section>
+<section id="slide-org32ee3e9">
+<h3 id="org32ee3e9">Objectifs des projets</h3>
+<ul>
+<li>Implémenter trois jeux classiques en Python</li>
+<li>Appliquer les concepts fondamentaux de l'algorithmique</li>
+<li>Créer des programmes interactifs en mode texte</li>
+
+</ul>
+
+</section>
+<section id="slide-org1625b2b">
+<h3 id="org1625b2b">Pour tous les projets</h3>
+<ul>
+<li>Python standard uniquement</li>
+<li>Mode texte (console)</li>
+<li>Gestion des erreurs de saisie</li>
+<li>Code commenté et structuré</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org95cd077">
+<h2 id="org95cd077">Projet 1 : Le Jeu du Pendu</h2>
+<div class="outline-text-2" id="text-org95cd077">
+</div>
+</section>
+<section id="slide-orge6e86a6">
+<h3 id="orge6e86a6">Règles et spécifications</h3>
+<ul>
+<li>Le programme permet la saisie d’un mot par un joueur</li>
+<li>Les autres joueurs devinent lettre par lettre</li>
+<li>Nombre limité d'essais</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orga8edfb0">
+<h2 id="orga8edfb0">Projet 2 : Devine le Nombre</h2>
+<div class="outline-text-2" id="text-orga8edfb0">
+</div>
+</section>
+<section id="slide-org6627784">
+<h3 id="org6627784">Règles et spécifications</h3>
+<ul>
+<li>Programme choisit un nombre (1-100)</li>
+<li>Joueur essaie de deviner</li>
+<li>Indices : trop haut/bas</li>
+<li>Le nombre de tentatives est compté et affiché</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org1882d2e">
+<h2 id="org1882d2e">Projet 3 : Morpion (Tic-Tac-Toe)</h2>
+<div class="outline-text-2" id="text-org1882d2e">
+</div>
+</section>
+<section id="slide-orgd18fc78">
+<h3 id="orgd18fc78">Règles et spécifications</h3>
+<ul>
+<li>Jeu à deux joueurs (X et O)</li>
+<li>Chaque joueur saisi à son tour les coordonnées</li>
+<li>Grille 3x3</li>
+<li>Victoire : aligner 3 symboles</li>
+
+</ul>
+
+</section>
+<section id="slide-org78b941f">
+<h3 id="org78b941f">Exemple</h3>
+<div class="org-src-container">
+
+<pre  class="src src-txt"   ><code trim>X | O | O
+--+---+---
+X |   |
+--+---+---
+X | O | X
+</code></pre>
+</div>
+
+
+</section>
+</section>
+<section>
+<section id="slide-org7354b83">
+<h2 id="org7354b83">Fin des exercices</h2>
+<div class="org-center">
+<p>
+Félicitations !
+</p>
+</div>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+
+});
+
+</script>
+</body>
+</html>

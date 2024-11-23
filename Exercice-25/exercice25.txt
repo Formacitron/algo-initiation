@@ -1,0 +1,4 @@
+Explication : Cet algorithme combine les deux précédents. Il effectue d'abord une opération de complexité O(n) (le calcul de la somme), puis une opération de complexité O(1) (l'accès au premier élément). La complexité globale est dominée par l'opération la plus coûteuse, donc O(n).
+
+Ces exercices aident à comprendre comment évaluer la complexité d'un algorithme en se concentrant sur les opérations principales et en identifiant comment le temps d'exécution évolue en fonction de la taille des données d'entrée.
+

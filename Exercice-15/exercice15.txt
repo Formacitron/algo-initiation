@@ -1,0 +1,21 @@
+FONCTIONS_UTILISEES
+  FONCTION calculIMC(poids,taille)
+    VARIABLES_FONCTION
+      imc EST_DU_TYPE NOMBRE
+    DEBUT_FONCTION
+    imc PREND_LA_VALEUR poids / (taille * taille)
+    RENVOYER imc
+    FIN_FONCTION
+VARIABLES
+  poids EST_DU_TYPE NOMBRE
+  taille EST_DU_TYPE NOMBRE
+  resultatIMC EST_DU_TYPE NOMBRE
+DEBUT_ALGORITHME
+  AFFICHER "Entrez votre poids en kg : "
+  LIRE poids
+  AFFICHER "Entrez votre taille en mètres : "
+  LIRE taille
+  resultatIMC PREND_LA_VALEUR calculIMC(poids,taille)
+  AFFICHER "Votre IMC est de : "
+  AFFICHER* resultatIMC
+FIN_ALGORITHME

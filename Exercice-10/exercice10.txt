@@ -1,0 +1,27 @@
+FONCTIONS_UTILISEES
+VARIABLES
+  notes EST_DU_TYPE LISTE
+  compteur EST_DU_TYPE NOMBRE
+  note EST_DU_TYPE NOMBRE
+  i EST_DU_TYPE NOMBRE
+DEBUT_ALGORITHME
+  note PREND_LA_VALEUR 0
+  compteur PREND_LA_VALEUR 0
+  TANT_QUE (note>=0) FAIRE
+    DEBUT_TANT_QUE
+    AFFICHER "Entrez une note: "
+    LIRE note
+    SI (note>=0) ALORS
+      DEBUT_SI
+      notes[compteur] PREND_LA_VALEUR note
+      compteur PREND_LA_VALEUR compteur + 1
+      FIN_SI
+    FIN_TANT_QUE
+  note PREND_LA_VALEUR 0
+  POUR i ALLANT_DE 0 A compteur-1
+    DEBUT_POUR
+    note PREND_LA_VALEUR note + notes[i]
+    FIN_POUR
+  AFFICHER "La moyenne est : "
+  AFFICHERCALCUL note / compteur
+FIN_ALGORITHME

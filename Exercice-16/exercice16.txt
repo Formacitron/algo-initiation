@@ -1,0 +1,22 @@
+FONCTIONS_UTILISEES
+  FONCTION fibonacci(n)
+    DEBUT_ALGORITHME
+      SI (n <= 1) ALORS
+        RENVOYER n
+      SINON
+        RENVOYER fibonacci(n-1) + fibonacci(n-2)
+      FIN_SI
+    FIN_ALGORITHME
+
+VARIABLES
+  n EST_DU_TYPE NOMBRE
+  resultat EST_DU_TYPE NOMBRE
+DEBUT_ALGORITHME
+  AFFICHER "Entrez le rang n de la suite de Fibonacci : "
+  LIRE n
+  resultat PREND_LA_VALEUR fibonacci(n)
+  AFFICHER "Le "
+  AFFICHER n
+  AFFICHER "-ième terme de la suite de Fibonacci est : "
+  AFFICHER resultat
+FIN_ALGORITHME

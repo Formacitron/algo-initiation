@@ -1,0 +1,2 @@
+Explication : Bien que l'algorithme contienne une boucle pour initialiser le tableau, l'opération principale (accéder au premier élément) s'exécute en temps constant, quelle que soit la taille du tableau. La complexité est donc O(1).
+

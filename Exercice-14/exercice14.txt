@@ -1,0 +1,20 @@
+FONCTIONS_UTILISEES
+  FONCTION euroToDollar(euros)
+    VARIABLES_FONCTION
+      taux EST_DU_TYPE NOMBRE
+    DEBUT_FONCTION
+    taux PREND_LA_VALEUR 1.18
+    RENVOYER euros * taux
+    FIN_FONCTION
+VARIABLES
+  montantEuros EST_DU_TYPE NOMBRE
+  montantDollars EST_DU_TYPE NOMBRE
+DEBUT_ALGORITHME
+  AFFICHER "Entrez un montant en euros : "
+  LIRE montantEuros
+  montantDollars PREND_LA_VALEUR euroToDollar(montantEuros)
+  AFFICHER montantEuros
+  AFFICHER " euros équivalent à "
+  AFFICHER montantDollars
+  AFFICHER " dollars."
+FIN_ALGORITHME
