@@ -1,5 +1,5 @@
 # Algorithmique, initiation
 Corrections des exercices de la formation Algorithmique, initiation.
-## Ênoncés
+## Énoncés
 https://formacitron.github.io/algo-initiation/
 
