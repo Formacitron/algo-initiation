@@ -1,8 +1,6 @@
 import os
 
 plateau = [["_" for i in range(3)] for i in range(3)]
-plateau[0][0] = "X"
-plateau[1][1] = "X"
 
 pions = [ "X", "O" ]
 joueur = 0
